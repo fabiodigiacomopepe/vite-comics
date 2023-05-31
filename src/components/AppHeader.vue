@@ -70,7 +70,9 @@ export default {
 
             <ul>
                 <li v-for="sezione in sezioniNav">
-                    {{ sezione.text }}
+                    <a :href="sezione.url" :class="sezione.current ? 'active' : ''">
+                        {{ sezione.text }}
+                    </a>
                 </li>
             </ul>
         </div>
@@ -78,18 +80,25 @@ export default {
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+    color: #646664;
+    height: 100%;
+    display: inline-block;
+    line-height: 85px;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
     width: 80%;
     margin: 0 auto;
     align-items: center;
-    padding: 15px 0;
     font-weight: bold;
 }
 
 img {
-    width: 80px;
+    width: 65px;
     max-width: 100%;
 }
 
@@ -101,6 +110,11 @@ ul {
 li {
     list-style-type: none;
     font-size: 12px;
+}
+
+.active {
+    color: #0282f9;
+    border-bottom: 3px solid #0282f9;
 }
 </style>
 
