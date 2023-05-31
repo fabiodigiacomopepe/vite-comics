@@ -5,9 +5,32 @@ export default {
 </script>
 
 <template>
-    <section>
+    <section class="container_blue-section">
         <div class="container_blue">
+            <div>
+                <img class="b" src="src/assets/img/buy-comics-digital-comics.png" alt="">
+                <span>DIGITAL COMICS</span>
+            </div>
 
+            <div>
+                <img class="s" src="src/assets/img/buy-comics-merchandise.png" alt="">
+                <span>DC MERCHAINDISE</span>
+            </div>
+
+            <div>
+                <img class="s" src="src/assets/img/buy-comics-subscriptions.png" alt="">
+                <span>SUBSCRIPTIONS</span>
+            </div>
+
+            <div>
+                <img class="b" src="src/assets/img/buy-comics-shop-locator.png" alt="">
+                <span>COMIC SHOP LOCATOR</span>
+            </div>
+
+            <div>
+                <img class="svg" src="src/assets/img/buy-dc-power-visa.svg" alt="">
+                <span>DC POWER VISA</span>
+            </div>
         </div>
     </section>
 
@@ -74,18 +97,59 @@ export default {
         </div>
     </section>
 
-    <section>
+    <section class="section_followus">
         <div class="container-follow_us">
+            <div class="button_signup">SIGN-UP NOW!</div>
 
+            <div class="rightside_followus">
+                <span>FOLLOW US</span>
+                <img src="src/assets/img/footer-facebook.png" alt="">
+                <img src="src/assets/img/footer-twitter.png" alt="">
+                <img src="src/assets/img/footer-youtube.png" alt="">
+                <img src="src/assets/img/footer-pinterest.png" alt="">
+                <img src="src/assets/img/footer-periscope.png" alt="">
+            </div>
         </div>
     </section>
 </template>
 
 <style scoped>
-.container_blue {
+.container_blue-section {
     background-color: #0282f9;
-    height: 130px;
 }
+
+.container_blue {
+    width: 80%;
+    margin: 0 auto;
+    height: 130px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container_blue div {
+    display: flex;
+    align-items: center;
+}
+
+.container_blue div span {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.container_blue img.b {
+    width: 30px;
+}
+
+.container_blue img.s {
+    width: 40px;
+}
+
+.container_blue img.svg {
+    width: 50px;
+}
+
 
 .link_section {
     background-image: url("../src/assets/img/footer-bg.jpg");
@@ -106,9 +170,17 @@ img {
     object-fit: cover;
 }
 
-.container-follow_us {
+.section_followus {
     background-color: #303030;
+}
+
+.container-follow_us {
     height: 90px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 li {
@@ -141,5 +213,28 @@ ul {
     width: 65%;
     display: flex;
     gap: 50px;
+}
+
+.button_signup {
+    width: 140px;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #0282f9;
+}
+
+.rightside_followus {
+    color: #0282f9;
+    font-weight: bold;
+}
+
+.rightside_followus img {
+    width: 25px;
+    margin-left: 10px;
+}
+
+.rightside_followus span {
+    position: relative;
+    bottom: 7px;
+    margin-right: 10px;
 }
 </style>
