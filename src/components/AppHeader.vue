@@ -79,14 +79,8 @@ export default {
     </section>
 </template>
 
-<style scoped>
-a {
-    text-decoration: none;
-    color: #646664;
-    height: 100%;
-    display: inline-block;
-    line-height: 85px;
-}
+<style lang="scss" scoped>
+@use '../styles/partials/variables.scss' as *;
 
 .container {
     display: flex;
@@ -95,26 +89,32 @@ a {
     margin: 0 auto;
     align-items: center;
     font-weight: bold;
-}
 
-img {
-    width: 65px;
-    max-width: 100%;
-}
+    img {
+        width: 65px;
+        max-width: 100%;
+    }
 
-ul {
-    display: flex;
-    gap: 25px;
-}
+    ul {
+        display: flex;
+        gap: 25px;
 
-li {
-    list-style-type: none;
-    font-size: 12px;
-}
+        li {
+            font-size: 12px;
 
-.active {
-    color: #0282f9;
-    border-bottom: 3px solid #0282f9;
+            a {
+                color: #646664;
+                height: 100%;
+                display: inline-block;
+                line-height: 85px;
+            }
+        }
+    }
+
+    .active {
+        color: $colore_primario;
+        border-bottom: 3px solid $colore_primario;
+    }
 }
 </style>
 

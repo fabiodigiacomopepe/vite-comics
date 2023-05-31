@@ -8,27 +8,27 @@ export default {
     <section class="container_blue-section">
         <div class="container_blue">
             <div>
-                <img class="b" src="src/assets/img/buy-comics-digital-comics.png" alt="">
+                <img class="b" src="src/assets/img/buy-comics-digital-comics.png" alt="buy-comics-digital-comics">
                 <span>DIGITAL COMICS</span>
             </div>
 
             <div>
-                <img class="s" src="src/assets/img/buy-comics-merchandise.png" alt="">
+                <img class="s" src="src/assets/img/buy-comics-merchandise.png" alt="buy-comics-merchandise">
                 <span>DC MERCHAINDISE</span>
             </div>
 
             <div>
-                <img class="s" src="src/assets/img/buy-comics-subscriptions.png" alt="">
+                <img class="s" src="src/assets/img/buy-comics-subscriptions.png" alt="buy-comics-subscriptions">
                 <span>SUBSCRIPTIONS</span>
             </div>
 
             <div>
-                <img class="b" src="src/assets/img/buy-comics-shop-locator.png" alt="">
+                <img class="b" src="src/assets/img/buy-comics-shop-locator.png" alt="buy-comics-shop-locator">
                 <span>COMIC SHOP LOCATOR</span>
             </div>
 
             <div>
-                <img class="svg" src="src/assets/img/buy-dc-power-visa.svg" alt="">
+                <img class="svg" src="src/assets/img/buy-dc-power-visa.svg" alt="buy-dc-power-visa">
                 <span>DC POWER VISA</span>
             </div>
         </div>
@@ -113,128 +113,128 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '../styles/partials/variables.scss' as *;
+
 .container_blue-section {
-    background-color: #0282f9;
-}
+    background-color: $colore_primario;
 
-.container_blue {
-    width: 80%;
-    margin: 0 auto;
-    height: 130px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+    .container_blue {
+        width: 80%;
+        margin: 0 auto;
+        height: 130px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
 
-.container_blue div {
-    display: flex;
-    align-items: center;
-}
+        div {
+            display: flex;
+            align-items: center;
 
-.container_blue div span {
-    margin-left: 10px;
-    font-size: 12px;
-}
+            img.b {
+                width: 30px;
+            }
 
-.container_blue img.b {
-    width: 30px;
-}
+            img.s {
+                width: 40px;
+            }
 
-.container_blue img.s {
-    width: 40px;
-}
+            img.svg {
+                width: 50px;
+            }
 
-.container_blue img.svg {
-    width: 50px;
+            span {
+                margin-left: 10px;
+                font-size: 12px;
+            }
+        }
+    }
 }
-
 
 .link_section {
     background-image: url("../src/assets/img/footer-bg.jpg");
-}
 
-.container-link {
-    width: 80%;
-    margin: 0 auto;
-    height: 400px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
+    .container-link {
+        width: 80%;
+        margin: 0 auto;
+        height: 400px;
+        color: white;
+        display: flex;
+        justify-content: space-between;
 
-img {
-    height: 100%;
-    width: 550px;
-    object-fit: cover;
+        .container_ul {
+            display: flex;
+            flex-wrap: wrap;
+            width: 55%;
+            padding: 40px 0;
+
+            .col_left {
+                width: 35%;
+            }
+
+            .col_right {
+                width: 65%;
+                display: flex;
+                gap: 50px;
+            }
+
+            h2 {
+                margin-bottom: 10px;
+            }
+
+            ul {
+                line-height: 1.3;
+                margin-bottom: 30px;
+
+                li {
+                    color: #767575;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        img {
+            height: 100%;
+            width: 550px;
+            object-fit: cover;
+        }
+    }
 }
 
 .section_followus {
     background-color: #303030;
-}
 
-.container-follow_us {
-    height: 90px;
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+    .container-follow_us {
+        height: 90px;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-li {
-    list-style-type: none;
-    color: #767575;
-    font-size: 15px;
-}
+        .button_signup {
+            width: 140px;
+            color: white;
+            padding: 10px 20px;
+            border: 2px solid $colore_primario;
+        }
 
-.container_ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 55%;
-    padding: 40px 0;
-}
+        .rightside_followus {
+            color: $colore_primario;
+            font-weight: bold;
 
-h2 {
-    margin-bottom: 10px;
-}
+            img {
+                width: 25px;
+                margin-left: 10px;
+            }
 
-ul {
-    line-height: 1.3;
-    margin-bottom: 30px;
-}
-
-.col_left {
-    width: 35%;
-}
-
-.col_right {
-    width: 65%;
-    display: flex;
-    gap: 50px;
-}
-
-.button_signup {
-    width: 140px;
-    color: white;
-    padding: 10px 20px;
-    border: 2px solid #0282f9;
-}
-
-.rightside_followus {
-    color: #0282f9;
-    font-weight: bold;
-}
-
-.rightside_followus img {
-    width: 25px;
-    margin-left: 10px;
-}
-
-.rightside_followus span {
-    position: relative;
-    bottom: 7px;
-    margin-right: 10px;
+            span {
+                position: relative;
+                bottom: 7px;
+                margin-right: 10px;
+            }
+        }
+    }
 }
 </style>
