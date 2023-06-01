@@ -12,9 +12,7 @@ export default {
 <template>
     <main>
         <div class="container">
-            <div class="current_series">
-                <div>CURRENT SERIES</div>
-            </div>
+            <div class="current_series">CURRENT SERIES</div>
             <AppListProducts />
             <div class="button_loadmore">LOAD MORE</div>
         </div>
@@ -30,30 +28,28 @@ main {
     font-weight: bold;
 
     .container {
-        @include flex_container;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 75%;
+        margin: 0 auto;
         color: white;
-        gap: 20px;
-        padding: 0 0 30px 0;
+        padding: 0 0 25px 0;
 
         .current_series {
-            width: 100%;
-
-            div {
-                background-color: $colore_primario;
-                width: 200px;
-                padding: 10px;
-                position: relative;
-                text-align: center;
-                bottom: 15px;
-                font-size: 24px;
-            }
+            background-color: $colore_primario;
+            width: 200px;
+            padding: 10px;
+            position: relative;
+            text-align: center;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
         }
 
         .button_loadmore {
             padding: 10px 70px;
             background-color: $colore_primario;
+            width: 220px;
+            text-align: center;
+            margin: 25px auto 0;
         }
     }
 }

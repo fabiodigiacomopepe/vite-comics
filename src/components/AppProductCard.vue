@@ -32,7 +32,7 @@ div {
 
 h4 {
     font-weight: 200;
-    font-size: 14px;
+    font-size: 12px;
     min-height: 30px;
 }
 </style>

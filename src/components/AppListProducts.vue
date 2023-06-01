@@ -88,18 +88,27 @@ export default {
 </script>
 
 <template>
-    <div v-for="(product, index) in products" :key="index">
-        <AppProductCard :details="product" />
-    </div>
+    <ul>
+        <li v-for="(product, index) in products" :key="index">
+            <AppProductCard :details="product" />
+        </li>
+    </ul>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
 @use '../styles/partials/mixins.scss' as *;
 
-div {
-    width: calc(100% / 6 - 20px);
-    margin-bottom: 10px;
+ul {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    li {
+        width: calc(100% / 6 - 20px);
+        margin-bottom: 10px;
+    }
 }
 </style>
 
