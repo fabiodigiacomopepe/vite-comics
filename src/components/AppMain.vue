@@ -1,15 +1,22 @@
 <script>
+import AppListProducts from './AppListProducts.vue'
+
 export default {
     name: "AppMain",
+    components: {
+        AppListProducts,
+    }
 }
 </script>
 
 <template>
     <main>
         <div class="container">
-            <div class="text">
-                --&#62; Content goes here &#60;--
+            <div class="current_series">
+                <div>CURRENT SERIES</div>
             </div>
+            <AppListProducts />
+            <div class="button_loadmore">LOAD MORE</div>
         </div>
     </main>
 </template>
@@ -20,16 +27,33 @@ export default {
 
 main {
     background-color: #1c1c1c;
-    height: 120px;
     font-weight: bold;
 
     .container {
         @include flex_container;
+        flex-wrap: wrap;
+        justify-content: center;
         color: white;
-        min-height: 100%;
+        gap: 20px;
+        padding: 0 0 30px 0;
 
-        .text {
-            font-size: 30px;
+        .current_series {
+            width: 100%;
+
+            div {
+                background-color: $colore_primario;
+                width: 200px;
+                padding: 10px;
+                position: relative;
+                text-align: center;
+                bottom: 15px;
+                font-size: 24px;
+            }
+        }
+
+        .button_loadmore {
+            padding: 10px 70px;
+            background-color: $colore_primario;
         }
     }
 }
