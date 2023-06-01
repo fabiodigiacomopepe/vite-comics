@@ -62,32 +62,34 @@ export default {
 </script>
 
 <template>
-    <section>
+    <header>
         <div class="container">
             <div>
-                <img :src="percorsoLogo" alt="logo">
+                <a href="#">
+                    <img :src="percorsoLogo" alt="logo">
+                </a>
             </div>
 
-            <ul>
-                <li v-for="sezione in sezioniNav">
-                    <a :href="sezione.url" :class="sezione.current ? 'active' : ''">
-                        {{ sezione.text }}
-                    </a>
-                </li>
-            </ul>
+            <nav>
+                <ul>
+                    <li v-for="(sezione, index) in sezioniNav" :key="index">
+                        <a :href="sezione.url" :class="sezione.current ? 'active' : ''">
+                            {{ sezione.text }}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 </template>
 
 <style lang="scss" scoped>
 @use '../styles/partials/variables.scss' as *;
+@use '../styles/partials/mixins.scss' as *;
 
 .container {
-    display: flex;
+    @include flex_container;
     justify-content: space-between;
-    width: 80%;
-    margin: 0 auto;
-    align-items: center;
     font-weight: bold;
 
     img {
